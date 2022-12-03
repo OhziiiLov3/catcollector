@@ -7,6 +7,7 @@ class Cat(models.Model):
     name = models.CharField(max_length=100)
     breed = models.CharField(max_length=100)
     description = models.CharField(max_length=250)
+    image = models.ImageField(null=True, blank=True)
     age = models.IntegerField()
 
     def __str__(self):
