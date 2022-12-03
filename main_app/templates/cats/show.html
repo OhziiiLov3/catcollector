@@ -1,10 +1,18 @@
    {% extends 'base.html' %} {% block content %}
-   
+   {%load static%}
     
-    <h2> Name: {{ cat.name }}</h1>
-    <p> Breed: {{ cat.breed }}</p>
-    <p> Description: {{ cat.description }}</p>
-    <p> Age: {{ cat.age }}</p>
+  
+    <div class="card" style="width: 18rem;">
+        <img src="{% static 'images/catcollectorimage.png' %}" width="100px" height="100" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h2 class="card-title"> Name: {{ cat.name }}</h1>
+                <p class="card-text"> Breed: {{ cat.breed }}</p>
+                <p class="card-text"> Description: {{ cat.description }}</p>
+                <p class="card-text"> Age: {{ cat.age }}</p>
+            
+            <a href="/" class="btn btn-success">Go Back</a>
+        </div>
+    </div>
 
 
 {% endblock %}

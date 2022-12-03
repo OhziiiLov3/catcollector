@@ -2,5 +2,21 @@
      color: orange;
  }
 
+ h1 a{
+    color: orange;
+ }
+
+ h2{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: purple;
+ }
+
+ p {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-style: italic;
+ }
+
  
 
