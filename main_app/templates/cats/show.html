@@ -5,6 +5,7 @@
     <div class="card" style="width: 18rem;">
         <img src="{% static 'images/catcollectorimage.png' %}" width="100px" height="100" class="card-img-top" alt="...">
         <div class="card-body">
+        <img src="{{cat.image.url}}" alt="Smiley face" width="250" height="250">
             <h2 class="card-title"> Name: {{ cat.name }}</h1>
                 <p class="card-text"> Breed: {{ cat.breed }}</p>
                 <p class="card-text"> Description: {{ cat.description }}</p>
@@ -13,6 +14,12 @@
             <a href="/" class="btn btn-success">Go Back</a>
         </div>
     </div>
+
+
+    <!-- Add Links for Update and Delete -->
+
+    <a href="{%url 'cats_update' cat.id%}" class="btn btn-warning">Update Cat</a>
+    <a href="{%url 'cats_delete' cat.id %}" class="btn btn-danger">Delete Cat</a>
 
 
 {% endblock %}
