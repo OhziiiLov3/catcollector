@@ -15,6 +15,9 @@
                     <p class="card-text"> Breed: {{ cat.breed }}</p>
                     <p class="card-text"> Age: {{ cat.age }}</p>
                     <a href="/cats/{{cat.id }}/" class="btn btn-primary">See Cat!</a>
+                    <h1>Adopted by:
+                        <a href="/user/{{cat.user.username}}">{{cat.user.username}}</a>
+                    </h1>
                 </div>
             </div>
             {% endfor %}
